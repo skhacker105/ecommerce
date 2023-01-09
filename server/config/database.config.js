@@ -3,11 +3,15 @@ const MONGOOSE = require('mongoose');
 MONGOOSE.Promise = global.Promise;
 
 module.exports = (config) => {
-    MONGOOSE.connect(config.connectionString);
+    MONGOOSE.connect(config.connectionString,
+        { useNewUrlParser: true, useUnifiedTopology: true },
+        () => {
+            console.log('Connected to MongoDB');
+        });
 
     let db = MONGOOSE.connection;
 
-    db.once('open', (err) => {
+    db.on('open', (err) => {
         if (err) {
             throw err;
         }

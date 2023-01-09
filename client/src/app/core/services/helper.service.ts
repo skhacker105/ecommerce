@@ -25,7 +25,7 @@ export class HelperService {
 
   getProfile(): any {
     try {
-      const decoded = decode(this.getToken());
+      const decoded: any = decode(this.getToken());
 
       return decoded.sub;
     } catch (err) {
@@ -35,7 +35,7 @@ export class HelperService {
 
   isLoggedIn(): boolean {
     try {
-      const decoded = decode(this.getToken());
+      const decoded: any = decode(this.getToken());
 
       if (decoded.exp > Date.now() / 1000) {
         return true;
@@ -49,7 +49,7 @@ export class HelperService {
 
   isAdmin(): boolean {
     try {
-      const decoded = decode(this.getToken());
+      const decoded: any = decode(this.getToken());
 
       if (decoded.exp < Date.now() / 1000 || !decoded.sub.isAdmin) {
         return false;

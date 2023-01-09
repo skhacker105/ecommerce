@@ -1,8 +1,8 @@
 module.exports = {
     development: {
-        connectionString: 'mongodb://localhost:27017/BookStore'
+        connectionString: 'mongodb://127.0.0.1:27017/BookStore'
     },
     production: {
-        connectionString: 'mongodb://localhost:27017/BookStore'
+        connectionString: 'mongodb://127.0.0.1:27017/BookStore'
     }
 };

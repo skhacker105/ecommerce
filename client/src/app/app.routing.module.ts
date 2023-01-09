@@ -10,11 +10,11 @@ import { HomeComponent } from './components/landing/home/home.component';
 const routes: Routes = [
   {
     path: 'user',
-    loadChildren: './components/user/user.module#UserModule'
+    loadChildren: () => import('./components/user/user.module').then(m => m.UserModule)
   },
   {
     path: 'book',
-    loadChildren: './components/book/book.module#BookModule'
+    loadChildren: () => import('./components/book/book.module').then(m => m.BookModule)
   },
   {
     path: 'home',
