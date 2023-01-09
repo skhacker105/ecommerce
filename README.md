@@ -33,7 +33,7 @@ Book Store requires
 * [MongoDB](https://www.mongodb.com/download-center#community) v6.0.1+
 * [MongoDBCompass](https://www.mongodb.com/download-center#community) v1.34.2+
 * [NodeJS](https://nodejs.org/en/) v18.13.0+
-* [Npm] (https://www.npmjs.com/package/angular) v9.2.0+
+* [NPM] (https://www.npmjs.com/package/angular) v9.2.0+
 * [Angular CLI](https://www.npmjs.com/package/@angular/cli) v15.0.5+
 
 To start the database (port: 27017): Install MongoDB, open new cmd window (in project root) and run
